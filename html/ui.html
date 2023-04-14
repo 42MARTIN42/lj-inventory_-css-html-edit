@@ -18,18 +18,12 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js" integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
     </head>
-    <body style="background-color: rgba(0, 0, 0, 0); font-family: 'Roboto', sans-serif !important;">
-        <div id="qbcore-inventory">
-            <div class="inventory-info">
-                <div class="player-inv-info">
-                    <span id="player-inv-label">Player</span><br>
-                    <!-- <img class="weight-img" src="images/weight.png"> -->
-                        <div>
-                            <div id="progressbar">
-                                <div class="pro"></div>
-                            </div>
-                        </div>
-                    <span id="player-inv-weight"></span>
+    <body style="background-color: rgba(0, 0, 0, 0); font-family: 'Roboto', fantasy !important;">
+      <div id="qbcore-inventory">
+          <div class="inventory-info">
+              <div class="player-inv-info">
+                  <span class="namejs" id="player-inv-label">Player</span><br>
+                  <span id="player-inv-weight"></span>
                 </div>
                 <div class="other-inv-info">
                     <span id="other-inv-label"></span><br>
@@ -50,11 +44,7 @@
             </div>
                 <div class="inv-options">
                     <div class="inv-options-list">
-                        <img class="brand-logo" src="./images/lj-symbol.svg"></img>
-                        <div class="inv-option-item color-picker-container">
-                          <label for="favcolor">Color:</label>
-                          <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-                        </div>
+                        <!-- <img class="brand-logo" src="./images/lj-symbol.svg"></img> -->
                         <input type="number" id="item-amount" class="inv-option-item" min=1 max="10000" placeholder="Amount"
                         pattern="[0-9]" onfocus="this.value=''" placeholder="" oninput="validity.valid||(value='');"></input>
                         <div class="inv-option-item" id="item-use"><p>Use</p></div>
@@ -101,7 +91,7 @@
                         <div class="text-check">
                             <q-item borderless dark tag="label" v-ripple>
                                 <q-item-section avatar>
-                                <q-checkbox dark v-on:click="select($event)" v-model="showblur" color="checkbox"></q-checkbox>
+                                <q-checkbox dark v-on:click="select($event)" v-model="showblur" color="checkbox"></q-checkbox> 
                             </q-item-section>
                             <q-item-section>
                                 <q-item-label class="text-check">Show Background Blur</q-item-label>
@@ -120,7 +110,7 @@
                   <q-dialog position="right" v-model="help">
                     <q-card style="max-width: 786px; padding: 40px 20px 40px 30px; bottom: 2.5vh; right: 2.25vw;">
                       <q-card-section>
-                        <div class="text-h6">Help:</div>
+                        <div class="text-h6">Segítség:</div>
                       </q-card-section>
               
                       <q-card-section class="q-pt-none">
